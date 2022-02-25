@@ -1,16 +1,304 @@
-import socket
+from time import sleep
+from pyrogram import Client, filters, sync
+from pyrogram.errors import FloodWait
+import os
+from pyrogram import Client, filters
+from pyrogram.errors import FloodWait
+from pyrogram.types import ChatPermissions
 import time
-print("Скрипт сделан Фениксом, подпишись на канал..")
-a = input("Найди Мамку:")
-s = a.replace('  ', '')
-m = s.encode("utf-8").hex()
-c = "000000740a2435353537333038632d643430312d343334312d613364652d336231386662333030376239121648616e647368616b6552656d6f7465536572766963651a0e70726f746f48616e647368616b6522241a220a20" + m
-b = "0000004c0a2462353138316665652d373231322d346439382d613764352d6564396238633961303633351213506c6179657252656d6f7465536572766963651a0f7365744f6e6c696e65537461747573"
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.connect(('158.177.37.2', 2222))
-sock.send(bytes.fromhex(c))
-time.sleep(0.1)
-while 1:
-sock.send(bytes.fromhex(b))
-time.sleep(10)
-print("Мамка не найдена ")
+from time import sleep
+if os.sys.platform == "win32":
+    os.system("cls")
+else:
+    os.system("clear")
+app = Client('dedinside-session', api_id=1016382, api_hash='c27834e5683d50a9bacf835a95ec4763')
+
+app.start()
+
+app.stop()
+print('''
+      ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ┃       Made by Criblle               Созданно Adrian       ┃
+      ┃  Telegram: @k1lary_eblan    Телеграм-канал: @его_нема ┃
+      ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+''')
+print("После ввода задержки напишите в любой телеграм чат команду /help для просмотра команд!\n --Команды-- \n.dead 5 \n.night 5 \n.ghoul \n.love 5 \n.jopa 5")
+print("\n Всем похуй!")
+print()
+cool = int(input("Введите завис.число - от него будет зависеть скорость (Норма 8):  "))
+if cool == 0:
+    print("Слишком быстро!")
+    cool = int(input("Введите завис.число - от него будет зависеть скорость (Норма 8):  "))
+if cool > 10:
+    print("Слишком медленно!")
+    cool = int(input("Введите завис.число - от него будет зависеть скорость (Норма 8):  "))
+if cool < 5:
+    print("Слишком быстро!")
+    cool = int(input("Введите завис.число - от него будет зависеть скорость(Норма 8):  "))
+
+
+@app.on_message(filters.command("dead", prefixes=".") & filters.me)
+def valentine(_, msg):
+    txt = textded.split("\n")
+    e = True
+    etime = int(msg.text.split('.dead ', maxsplit=1)[1])
+    for i in txt:
+        time = etime
+        if e == True:
+            e = False
+        elif time > 10:
+            try:
+                msg.edit('<b>Error: Нельзя ставить больше 10с!</b>')
+                sleep(0.5)
+                msg.delete()
+            except:
+                pass
+        else:
+            try:
+                msg.edit(f'❤️{i} ❤️')
+                sleep(time/cool)
+                msg.edit(f'🧡 {i} 🧡')
+                sleep(time/cool)
+                msg.edit(f'💛 {i} 💛')
+                sleep(time/cool)
+                msg.edit(f'💚 {i} 💚')
+                sleep(time/cool)
+                msg.edit(f'💙 {i} 💙')
+                sleep(time/cool)
+                msg.edit(f'💜 {i} 💜')
+                sleep(time/cool)
+                msg.edit(f'🖤 {i} 🖤')
+                sleep(time/cool)
+                msg.edit(f'🤍 {i} 🤍')
+                sleep(time/cool)
+            except:
+                pass
+    msg.edit(f'<b> ⭐ @starzedscript </b>')
+
+textded = '''
+<b> Я дед инсайд </b>
+<b> Мне 9 лет </b>
+<b> И я хочу в Психокидс </b>
+'''
+
+textded1 = '''
+<b>Трахну тебя зайка💚</b>
+<b>Трахну тебя солнышко 💛</b>
+<b>Трахну тебя  котёнок ❤</b>️
+<b>Трахну тебя цветочек 💙</b>
+<b>Трахну тебя ангелочек 💜</b>
+<b>Трахну тебя принцесса 💓</b>
+<b>Трахну тебя красотка 💕</b>
+<b>Ну и конечно милашка 💖</b>
+<b>спокойной ночи симпатяжка 💗</b>
+<b>спокойной ночи бусинка 💘</b>
+<b>❤я(Адриан)❤</b>️
+<b>💚 тебя 💚</b>
+<b>💙 очень 💙</b>
+<b>💛 сильно 💛</b>
+<b>💜 люблю 💜</b>
+'''
+
+@app.on_message(filters.command("night", prefixes=".") & filters.me)
+def valentine(_, msg):
+    txt = textded1.split("\n")
+    e = True
+    etime = int(msg.text.split('.night ', maxsplit=1)[1])
+    for i in txt:
+        time = etime
+        if e == True:
+            e = False
+        elif time > 10:
+            try:
+                msg.edit('<b>Error: Нельзя ставить больше 10с!</b>')
+                sleep(0.5)
+                msg.delete()
+            except:
+                pass
+        else:
+            try:
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+            except:
+                pass
+    msg.edit(f'<b> ⭐ @starzedscript </b>')
+
+@app.on_message(filters.command("ghoul", prefixes=".") & filters.me)
+def valentine(app, message):
+    app.send_message(message.chat.id,f'<b>Ты гуль?</b>')
+    sleep(2)
+    app.send_message(message.chat.id,f'<i>Я тоже</i>')
+    sleep(5)
+    i = 1000
+    while i > 0:
+        try:
+            app.send_message(message.chat.id, f'{i} - 7 = {i-7}')
+        except FloodWait as e:
+            sleep(e.x)
+
+        i -= 7
+        sleep(0)
+
+    if(end_message != ''):
+        app.send_message(message.chat.id, end_message)
+
+@app.on_message(filters.command("help", prefixes="/") & filters.me)
+def valentine(app, message):
+    app.send_message(message.chat.id,f'''
+
+<b>—Команды—
+
+Скрипт спама 1000-7
+</b><i>+ Введите: </i><code>.ghoul
+
+</code><b>Скрипт анимации «Я дед инсайд💚»
+</b><i>+ Введите</i> <code>.dead 5     
+
+</code><b>Скрипт анимации для</b><code> </code><b>влюблённых: «Спокойной ночи❤️»
+</b><i>+ Введите </i><code>.night 5
+
+</code><b>Скрипт анимации «Я люблю тебя❤️‍🔥»
+</b><i>+ Введите</i> <code>.love 5   
+
+</code><b>Скрипт анимации «ВЗЛОМ ЖОПЫ»
+</b><i>+ Введите</i><code> .jopa 5   
+
+
+</code>Все команды нужно писать в любой чат<code> </code><i>телеграмм после выполнения кода! (Ввода зависим. числа)</i>
+<i>Made by @starzedscript</i>
+
+''')
+
+@app.on_message(filters.command("jopa", prefixes=".") & filters.me)
+def valentine(_, msg):
+    txt = jopa.split("\n")
+    e = True
+    etime = int(msg.text.split('.jopa ', maxsplit=1)[1])
+    for i in txt:
+        time = etime
+        if e == True:
+            e = False
+        elif time > 10:
+            try:
+                msg.edit('<b>Error: Нельзя ставить больше 10с!</b>')
+                sleep(0.5)
+                msg.delete()
+            except:
+                pass
+        else:
+            try:
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+            except:
+                pass
+    msg.edit(f'<b> ⭐ @starzedscript </b>')
+
+@app.on_message(filters.command("love", prefixes=".") & filters.me)
+def valentine(_, msg):
+    txt = love.split("\n")
+    e = True
+    etime = int(msg.text.split('.love', maxsplit=1)[1])
+    for i in txt:
+        time = etime
+        if e == True:
+            e = False
+        elif time > 10:
+            try:
+                msg.edit('<b>Error: Нельзя ставить больше 10с!</b>')
+                sleep(0.5)
+                msg.delete()
+            except:
+                pass
+        else:
+            try:
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+                msg.edit(f'{i}')
+                sleep(time/cool)
+            except:
+                pass
+    msg.edit(f'<b> ⭐ @starzedscript </b>')
+
+jopa = '''
+           <b>ВЗЛОМ ЖОПЫ</b> 
+           <b><i>Loading...</i></b> 
+    10%  █▒▒▒▒▒▒▒▒▒▒▒▒
+    30%  ███▒▒▒▒▒▒▒▒▒▒    
+    50%  █████▒▒▒▒▒▒▒▒
+    66%  ██████▒▒▒▒▒▒▒
+    79%  ████████▒▒▒▒▒
+    84%  █████████▒▒▒▒
+    89%  ██████████▒▒▒
+    95%  ████████████▒
+    99%  █████████████
+    100% █████████████
+    <b> ВАША ЖОПА ВЗЛОМАНА </b>
+    <b><i>Создатель: "Прощайте"</i></b>
+    <b><i>Создатель: "Прощайте"</i></b>
+    <b><i>Создатель: "Прощайте"</i></b>
+'''
+
+love = '''
+🤍🤍🤍🤍🤍🤍🤍🤍🤍🤍
+<b>Загрузка любви...</b>
+❤️🤍🤍🤍🤍🤍🤍🤍🤍🤍
+❤️❤️🤍🤍🤍🤍🤍🤍🤍🤍
+❤️❤️❤️🤍🤍🤍🤍🤍🤍🤍
+❤️❤️❤️❤️🤍🤍🤍🤍🤍🤍
+❤️❤️❤️❤️❤️🤍🤍🤍🤍🤍
+❤️❤️❤️❤️❤️❤️🤍🤍🤍🤍
+❤️❤️❤️❤️❤️❤️❤️🤍🤍🤍
+❤️❤️❤️❤️❤️❤️❤️❤️🤍🤍
+❤️❤️❤️❤️❤️❤️❤️❤️❤️🤍
+❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+<b>Я люблю тебя ❤️‍🔥</b>
+<b>Я люблю тебя ❤️‍🔥</b>
+<b>Я люблю тебя ❤️‍🔥</b>
+<b>Я люблю тебя ❤️‍🔥</b>
+<b>Я люблю тебя ❤️‍🔥</b>
+
+'''
+end_message = '<b> ⭐ @starzedscript </b>'
+app.run()
